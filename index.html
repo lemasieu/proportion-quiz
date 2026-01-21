@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thực Hành Tỷ Lệ Thức</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <div class="container">
+        <h1>Thực Hành Tỉ Lệ Thức</h1>
+    
+        <div class="stats">
+            <p id="thong-ke">Đã làm: 0 câu | Đúng: 0 (0%)</p>
+            <button id="xem-lich-su">Xem 5 câu gần nhất</button>
+        </div>
+
+        <div id="lich-su" style="display:none; text-align:left; margin:20px 0; padding:10px; background:#252525; border-radius:6px;">
+            <h3>5 bài gần nhất</h3>
+            <div id="lich-su-content"></div>
+            <button id="dong-lich-su">Đóng</button>
+        </div>
+        <div id="de-bai"></div>
+        <div class="ty-le-thuc">
+            <p>Ta có tỷ lệ thức:</p>
+            <div class="ratio-container">
+                <!-- Phân số TRÁI (x / Ô2) -->
+                <div class="fraction">
+                    <div class="fraction-top" id="x">x</div>
+                    <div class="fraction-line"></div>
+                    <input type="number" id="o2" class="fraction-bottom" placeholder="...">
+                </div>
+        
+                <!-- Dấu = -->
+                <div class="equal">=</div>
+        
+                <!-- Phân số PHẢI (Ô1 / Ô3) -->
+                <div class="fraction">
+                    <div class="fraction-top">
+                        <input type="number" id="o1" placeholder="...">
+                    </div>
+                    <div class="fraction-line"></div>
+                        <input type="number" id="o3" class="fraction-bottom" placeholder="...">
+                    </div>
+                </div>
+            </div>
+
+        <p class="xu-ra-x">Suy ra x = <input type="number" id="o4" placeholder="..."></p>
+        <button id="kiem-tra">Kiểm Tra</button>
+        <p id="ket-qua"></p>
+        <button id="bai-moi">Bài Mới</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
