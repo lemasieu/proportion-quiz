@@ -1,0 +1,44 @@
+[
+    {
+        "type": "thuan",
+        "de": "Nếu [so1] mét vải giá [so2] đồng, thì [so3] mét vải giá bao nhiêu đồng?",
+        "o1": "[so3]",
+        "o2": "[so2]",
+        "o3": "[so1]"
+    },
+    {
+        "type": "nghich",
+        "de": "[so1] công nhân làm trong [so2] ngày xong việc. Hỏi [so3] công nhân làm trong bao nhiêu ngày?",
+        "o1": "[so2]",
+        "o2": "[so1]",
+        "o3": "[so3]"
+    },
+    {
+        "type": "thuan",
+        "de": "Xe chạy [so1] giờ đi được [so2] km, thì trong [so3] giờ đi được bao nhiêu km?",
+        "o1": "[so3]",
+        "o2": "[so2]",
+        "o3": "[so1]"
+    },
+    {
+        "type": "nghich",
+        "de": "[so1] vòi nước chảy đầy bể trong [so2] giờ. Hỏi [so3] vòi chảy đầy trong bao nhiêu giờ?",
+        "o1": "[so2]",
+        "o2": "[so1]",
+        "o3": "[so3]"
+    },
+    {
+        "type": "thuan",
+        "de": "Biết rằng [so2] lít dung dịch A nặng [so1] kg, vậy [so3] kg dung dịch A chứa bao nhiêu lít?",
+        "o1": "[so3]",
+        "o2": "[so2]",
+        "o3": "[so1]"
+    },
+    {
+        "type": "nghich",
+        "de": "Một đội thợ gồm [so1] công nhân ăn hết số gạo được phân phát trong [so2] ngày. Hỏi [so3] công nhân ăn hết số gạo đó trong bao nhiêu ngày?",
+        "o1": "[so2]",
+        "o2": "[so1]",
+        "o3": "[so3]"
+    }
+]
