@@ -1,62 +1,79 @@
-# Proportion Quiz - Thực hành Tỉ lệ Thức
+# Proportion Quiz
 
-Một ứng dụng web đơn giản giúp học sinh lớp 4-5 thực hành giải bài toán **tỉ lệ thuận** và **tỉ lệ nghịch** bằng cách lập **tỉ lệ thức** và tính giá trị x.
+A simple web application that helps students practice solving problems involving **direct proportion** (tỉ lệ thuận) and **inverse proportion** (tỉ lệ nghịch) by setting up proportions and calculating the value of `x`. Designed for grade 4–5 students, the app provides random problems, instant answer checking, and a history of recent attempts.
 
-Ứng dụng hỗ trợ:
-- Đề bài ngẫu nhiên với số nguyên đảm bảo kết quả x là số nguyên.
-- Giao diện tối, thân thiện với điện thoại (responsive).
-- Chấp nhận nhiều cách lập tỉ lệ thức (hoán đổi vế, đổi chéo) miễn là toán học đúng.
-- Kiểm tra đáp án tức thì + hiển thị đáp án mẫu phổ biến.
-- Thống kê số câu làm / đúng.
-- Lịch sử 5 bài gần nhất.
+## 🚀 Live Demo
 
-Demo giao diện: https://xn--msiu-goa8b.vn/github/proportion-quiz/
+Check out the live demo: [https://www.sieu.io.vn/github/proportion-quiz](https://www.sieu.io.vn/github/proportion-quiz)
 
-## Tính năng chính
+## ✨ Features
 
-- Sinh đề bài ngẫu nhiên từ file `data.json` (có thể mở rộng thêm đề).
-- Đảm bảo x luôn là số nguyên (không thập phân).
-- Linh hoạt kiểm tra tỉ lệ thức: chấp nhận hoán đổi vế, đảo ngược (dùng kiểm tra chéo a×d = b×c).
-- Hiển thị đáp án mẫu theo cách phổ biến trong sách giáo khoa Việt Nam.
-- Thống kê realtime: số câu làm / đúng / phần trăm.
-- Xem lại 5 bài gần nhất (đề, đáp án đúng, cách bạn trả lời, kết quả).
-- Giao diện dark mode, responsive (tốt trên mobile).
+- **Random Problems** – Questions are randomly generated from a `data.json` file, ensuring `x` is always an integer (no decimals).
+- **Flexible Answer Checking** – Accepts multiple valid ways of setting up the proportion (swapping sides, cross-multiplication, etc.) as long as the math is correct (checked via `a × d = b × c`).
+- **Instant Feedback** – Shows whether your answer is correct and displays a sample solution using the common method taught in Vietnamese textbooks.
+- **Real-Time Statistics** – Tracks the number of questions attempted, correct answers, and accuracy percentage.
+- **History of Last 5 Attempts** – View the last 5 problems, including the question, the correct answer, your answer, and the result.
+- **Dark Mode & Responsive** – A clean, dark-themed interface that works well on mobile devices.
+- **No External Libraries** – Lightweight and easy to deploy.
 
-## Công nghệ sử dụng
+## 🛠️ Technologies Used
 
-- HTML5
-- CSS3 (Flexbox + Gradient + Responsive)
-- Vanilla JavaScript (không framework)
-- JSON cho dữ liệu đề bài
+- **HTML5** – Structure of the application
+- **CSS3** – Styling with Flexbox, gradients, and responsive design
+- **JavaScript (Vanilla)** – Logic for generating problems, checking answers, and tracking statistics
+- **JSON** – Data storage for question templates
 
-Không dùng thư viện ngoài → nhẹ, dễ deploy.
+## 📁 Project Structure
 
-## Cấu trúc thư mục
-proportion-quiz/<br>
-├── index.html          # Trang chính<br>
-├── styles.css          # Giao diện tối, responsive<br>
-├── script.js           # Logic sinh đề, kiểm tra đáp án, thống kê, lịch sử<br>
-└── data.json           # Danh sách đề bài mẫu (tỉ lệ thuận & nghịch)<br>
+```
+proportion-quiz/
+├── index.html      # Main page
+├── styles.css      # Dark theme, responsive layout
+├── script.js       # Problem generation, answer checking, statistics, history
+├── data.json       # Question templates (direct & inverse proportion)
+└── README.md       # Project documentation
+```
 
+## 🔧 Installation & Usage
 
-## Cách chạy cục bộ
-
-1. Clone repo:
+1. **Clone the repository**
    ```bash
    git clone https://github.com/lemasieu/proportion-quiz.git
+   ```
+2. **Navigate to the project folder**
+   ```bash
    cd proportion-quiz
    ```
-2. Mở file index.html bằng trình duyệt (Chrome/Firefox/Edge).<br>
-Hoặc dùng live server (VS Code extension) để xem realtime.
+   
+3. **Run the application with a local server**
 
-3. Mở rộng & cải tiến (gợi ý)
+⚠️ Important: This project loads data from a JSON file, so you need to use a local development server instead of opening `index.html` directly in your browser to avoid CORS issues.
 
-- Thêm âm thanh đúng/sai (ding / buzz).
-- Lưu tiến độ bằng localStorage (thống kê không mất khi reload).
-- Thêm mức độ khó (dễ/trung bình/khó).
-- Thêm giải thích từng bước khi sai.
-- Thêm timer hoặc điểm số.
-- Dịch sang tiếng Anh nếu muốn dùng quốc tế.
+- **Using VS Code** – Install the "Live Server" extension, right-click on `index.html`, and select "Open with Live Server"
+- **Using Python** – Run `python -m http.server` (Python 3) or `python -m SimpleHTTPServer` (Python 2) and open `http://localhost:8000`
+- **Using Node.js** – Install `http-server` globally (`npm install -g http-server`) and run `http-server` in the project folder
 
-4. License<br>
-MIT License – Tự do sử dụng, chỉnh sửa, phân phối (có thể dùng cho giáo viên, học sinh, hoặc dự án cá nhân).
+## 📝 How It Works
+
+1. **A random problem is displayed** – The app picks a question from data.json and shows it on screen. The problem involves direct or inverse proportion, and you need to find the value of x.
+2. **Set up the proportion** – Enter your proportion equation in the input field (e.g., a/b = c/x).
+3. **Submit your answer** – Click the "Check" button to see if your proportion is correct.
+4. **View feedback** – The app tells you whether your answer is correct and, if not, shows a sample solution.
+5. **Track your progress** – The statistics panel updates in real time, showing your total attempts, correct answers, and accuracy percentage.
+6. **Review recent attempts** – The last 5 problems are displayed in a history panel, including the question, the correct answer, your answer, and the result.
+
+**How answer checking works:**
+
+The app validates your proportion by checking if the cross-multiplication holds (`a × d = b × c`). This means you can write the proportion in different but mathematically equivalent ways and still be marked correct.
+
+## 🤝 Contributing
+
+Contributions are welcome! Feel free to submit a Pull Request or open an Issue.
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add some amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
+
+## 📄 License
+This project is open-source and available under the MIT License.
